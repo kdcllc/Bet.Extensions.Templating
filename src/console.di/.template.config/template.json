@@ -18,22 +18,27 @@
     "guids": [
         "57300c3f-a09b-47d2-ba4e-277bc892258b" // Usersecrets
     ],
-    "symbols": {
-        "usid01": {
-            "type": "generated",
-            "generator": "guid",
-            "replaces": "usid",
-            "parameters": {
-                "format": "D"
-            }
-        },
-        "skipRestore": {
-            "type": "parameter",
-            "datatype": "bool",
-            "description": "If specified, skips the automatic restore of the project on create.",
-            "defaultValue": "false"
-        }
+  "symbols": {
+    "azureVaultName": {
+      "type": "parameter",
+      "defaultValue": "https://(vaultname).vault.azure.net/",
+      "replaces": "(vaultname)"
     },
+    "usid01": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "usid",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    }
+  },
     "postActions": [
         {
             "condition": "(!skipRestore)",

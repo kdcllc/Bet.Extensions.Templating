@@ -1,8 +1,13 @@
 {
-    "symbolInfo": {
-      "skipRestore": {
-        "longName": "no-restore",
-        "shortName": ""
-      }
+  "symbolInfo": {
+    "skipRestore": {
+      "longName": "no-restore",
+      "shortName": ""
+    },
+
+    "azureVaultName": {
+      "longName": "azurevault-name",
+      "shortName": "vault"
     }
+  }
   }

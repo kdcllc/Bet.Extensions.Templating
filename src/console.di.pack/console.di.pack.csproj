@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -25,5 +25,9 @@
   <ItemGroup>
     <Content Include="..\console.di\**\*" Exclude="$(ExcludeFromPackage)" PackagePath="Content/" />
     <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="..\console.di\Properties\launchSettings.json" />
   </ItemGroup>
 </Project>

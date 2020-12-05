@@ -23,7 +23,7 @@ Bet.Extensions.Templating Projects
     # build 
     dotnet build -c Release
     dotnet pack -c Release -o packages
-    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.0.nupkg
+    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.0-preview1.nupkg --debug:reinit
     
     # uninstall    
     dotnet new -u Bet.Extension.Template.Console.DI.CSharp
