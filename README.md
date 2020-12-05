@@ -1,0 +1,2 @@
+# templating
+DotNetCore Templating projects
