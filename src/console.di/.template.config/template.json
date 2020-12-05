@@ -17,19 +17,36 @@
     "preferNameDirectory": true,
     "guids": [
         "57300c3f-a09b-47d2-ba4e-277bc892258b" // Usersecrets
-     ],
-
-     "symbols": {
-        "usid01":{
+    ],
+    "symbols": {
+        "usid01": {
             "type": "generated",
             "generator": "guid",
             "replaces": "usid",
             "parameters": {
-              "format":"D"
+                "format": "D"
             }
-          }
-     },
-
+        },
+        "skipRestore": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "If specified, skips the automatic restore of the project on create.",
+            "defaultValue": "false"
+        }
+    },
+    "postActions": [
+        {
+            "condition": "(!skipRestore)",
+            "description": "Restore NuGet packages required by this project.",
+            "manualInstructions": [
+                {
+                    "text": "Run 'dotnet restore'"
+                }
+            ],
+            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+            "continueOnError": true
+        }
+    ],
     "sources": [
         {
             "exclude": [
