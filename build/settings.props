@@ -1,0 +1,38 @@
+<Project>
+
+  <PropertyGroup Label="Basic Settings">
+    <VersionPrefix>1.0.0-preview1</VersionPrefix>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);CS1591;NU1605;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Ownership Settings">
+    <Title>King David Consulting LLC Templates</Title>
+    <Company>King David Consulting LLC</Company>
+    <Authors>kdcllc</Authors>
+    <Copyright>Copyright © King David Consulting LLC</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget Package Settings">
+    <Description>Collection of AspNetCore extensions and reusable functionality.</Description>
+    <PackageProjectUrl>https://github.com/kdcllc/Bet.Extensions.Templating</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kdcllc/Bet.Extensions.Templating.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicense>https://github.com/kdcllc/Bet.Extensions.Templating/master/LICENSE</PackageLicense>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>common, templating</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="SourceLink Settings">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <DebugType>Embedded</DebugType>
+    <EmbedAllSources>True</EmbedAllSources>
+  </PropertyGroup>
+</Project>

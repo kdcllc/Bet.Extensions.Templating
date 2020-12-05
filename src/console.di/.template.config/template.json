@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "kdcllc",
+    "classifications": [
+        "Common",
+        "Console",
+        "K8s"
+    ],
+    "identity": "Bet.Extension.Template.Console.DI.CSharp",
+    "name": "Console Application with Dependency Injection (extended)",
+    "shortName": "console.di",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "console.di",
+    "preferNameDirectory": true,
+    "guids": [
+        "57300c3f-a09b-47d2-ba4e-277bc892258b" // Usersecrets
+     ],
+
+     "symbols": {
+        "usid01":{
+            "type": "generated",
+            "generator": "guid",
+            "replaces": "usid",
+            "parameters": {
+              "format":"D"
+            }
+          }
+     },
+
+    "sources": [
+        {
+            "exclude": [
+                ".vs/**/*",
+                ".vscode/**/*",
+                "**/[Bb]in/**",
+                "**/[Oo]bj/**",
+                ".template.config/**/*",
+                "**/*.filelist",
+                "**/*.user",
+                "**/*.lock.json"
+            ]
+        }
+    ]
+}
