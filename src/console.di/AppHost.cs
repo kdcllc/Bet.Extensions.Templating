@@ -88,10 +88,11 @@ namespace console.di
 
             if (intermConfig["AzureVault:BaseUrl"] != null)
             {
-                intermConfigBuilder.AddAzureKeyVault(
+                finalConfig.AddConfiguration(
+                               intermConfigBuilder.AddAzureKeyVault(
                                hostingEnviromentName: HostingEnvironment.EnvironmentName,
                                usePrefix: true,
-                               sectionName: "AzureVault");
+                               sectionName: "AzureVault"));
             }
 
             return finalConfig

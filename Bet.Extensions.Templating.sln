@@ -22,6 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "console.di.pack", "src\cons
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".template.config", "{363434C5-AE03-498B-805C-742B8445D8EB}"
 	ProjectSection(SolutionItems) = preProject
+		src\console.di\.template.config\dotnetcli.host.json = src\console.di\.template.config\dotnetcli.host.json
 		src\console.di\.template.config\template.json = src\console.di\.template.config\template.json
 	EndProjectSection
 EndProject
