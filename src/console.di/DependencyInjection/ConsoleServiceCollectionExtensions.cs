@@ -1,4 +1,4 @@
-﻿using console.di;
+﻿using Console.Di;
 
 using Microsoft.Extensions.Hosting;
 

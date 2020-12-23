@@ -1,5 +1,6 @@
-using console.di;
+using Console.Di;
 
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using Serilog;
@@ -39,6 +40,7 @@ try
 
     using var host = AppHost
                     .CreateHostBuilder()
+                    .ConfigureServices(ConsoleServiceCollectionExtensions.ConfigureServices)
                     .Build();
 
     await host.StartAsync();

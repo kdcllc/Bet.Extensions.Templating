@@ -32,7 +32,7 @@ Installing from nuget package
     # build 
     dotnet build -c Release
     dotnet pack -c Release -o packages
-    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.0-preview1.nupkg --debug:reinit
+    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.2-preview1.nupkg
     
     # uninstall    
     dotnet new -u Bet.Extension.Template.Console.DI.CSharp
