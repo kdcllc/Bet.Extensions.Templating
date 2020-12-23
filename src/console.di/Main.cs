@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace console.di
+namespace Console.Di
 {
     public class Main
     {

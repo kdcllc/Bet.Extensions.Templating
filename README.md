@@ -25,29 +25,19 @@ If you like or are using this project to learn or start your solution, please gi
 ```bash
     dotnet new --install Bet.Extension.Template.Console.DI.CSharp::1.0.0
 ```
-## Development
 
-```bash
-    dotnet new -i .\
+Installing from nuget package
 
-    dotnet new -u C:\Dev\Github\kdcllc\Bet.Extensions.Templating\src\console.di\src
-
-    dotnet new -i PATH_TO_NUPKG_FILE
-
-    
-
-```
-
-- Installing from nuget package
 ```bash
     # build 
     dotnet build -c Release
     dotnet pack -c Release -o packages
-    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.0-preview1.nupkg --debug:reinit
+    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.2-preview1.nupkg
     
     # uninstall    
     dotnet new -u Bet.Extension.Template.Console.DI.CSharp
 ```
+
 ## Resources for building DotNetCore Templating projects
 
 - https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates

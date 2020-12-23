@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Internal;
 
 using Serilog;
@@ -11,7 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace console.di
+namespace Microsoft.Extensions.Hosting
 {
     public sealed class AppHost
     {
@@ -36,8 +34,7 @@ namespace console.di
                     {
                         configBuilder.AddConfiguration(Configuration);
                     })
-                    .UseSerilog(Log.Logger)
-                    .ConfigureServices(ConsoleServiceCollectionExtensions.ConfigureServices);
+                    .UseSerilog(Log.Logger);
         }
 
         private static IConfiguration GetConfiguration()
