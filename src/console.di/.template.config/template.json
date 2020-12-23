@@ -4,6 +4,7 @@
     "classifications": [
         "Common",
         "Console",
+        "Dependency Injection",
         "K8s"
     ],
     "identity": "Bet.Extension.Template.Console.DI.CSharp",
@@ -13,7 +14,7 @@
         "language": "C#",
         "type": "project"
     },
-    "sourceName": "console.di",
+    "sourceName": "Console.Di",
     "preferNameDirectory": true,
     "guids": [
         "57300c3f-a09b-47d2-ba4e-277bc892258b" // Usersecrets
