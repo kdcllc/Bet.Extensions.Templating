@@ -26,9 +26,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".templa
 		src\console.di\.template.config\template.json = src\console.di\.template.config\template.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console.Di", "src\console.di\Console.Di.csproj", "{8CCEEC63-4C1F-4A86-A7F8-B110DB1D549F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "console.di", "src\console.di\console.di.csproj", "{8CCEEC63-4C1F-4A86-A7F8-B110DB1D549F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bet.Extensions.Templating.Console", "src\Bet.Extensions.Templating.Console\Bet.Extensions.Templating.Console.csproj", "{81454023-14F2-42C2-995C-D3784BE8395D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bet.Extensions.Templating.Console", "src\Bet.Extensions.Templating.Console\Bet.Extensions.Templating.Console.csproj", "{81454023-14F2-42C2-995C-D3784BE8395D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B96BE31D-8303-4767-AE84-AE7D64817F2B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
+		clean.sh = clean.sh
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

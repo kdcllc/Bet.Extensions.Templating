@@ -17,17 +17,19 @@
 
     <ExcludeFromPackage>
       **/bin/**;
-      **/obj/**
+      **/obj/**;
+      **.user
     </ExcludeFromPackage>
 
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\console.di\**\*" Exclude="$(ExcludeFromPackage)" PackagePath="Content/" />
+    <Content Include="..\Console.Di\**\*" Exclude="$(ExcludeFromPackage)" PackagePath="Content/" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="..\console.di\Properties\launchSettings.json" />
+    <Content Remove="..\Console.Di\Console.Di.csproj.user" />
   </ItemGroup>
+
 </Project>
