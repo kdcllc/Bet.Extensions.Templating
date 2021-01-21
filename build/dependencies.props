@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789.`))' == 'net'">
-    <NetCoreVersion>5.0.0</NetCoreVersion>
+    <NetCoreVersion>5.0.*</NetCoreVersion>
     <ThreadinCommon>$(NetCoreVersion)</ThreadinCommon>
   </PropertyGroup>
 

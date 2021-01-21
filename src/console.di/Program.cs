@@ -1,5 +1,3 @@
-using Console.Di;
-
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 

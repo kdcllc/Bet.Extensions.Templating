@@ -1,24 +1,29 @@
 {
-    "$schema": "http://json.schemastore.org/template",
-    "author": "kdcllc",
-    "classifications": [
-        "Common",
-        "Console",
-        "Dependency Injection",
-        "K8s"
-    ],
-    "identity": "Bet.Extension.Template.Console.DI.CSharp",
-    "name": "Console Application with Dependency Injection (extended)",
-    "shortName": "console.di",
-    "tags": {
-        "language": "C#",
-        "type": "project"
-    },
-    "sourceName": "Console.Di",
-    "preferNameDirectory": true,
-    "guids": [
-        "57300c3f-a09b-47d2-ba4e-277bc892258b" // Usersecrets
-    ],
+  "$schema": "http://json.schemastore.org/template",
+  "author": "kdcllc",
+  "classifications": [
+    "Common",
+    "Console",
+    "Dependency Injection",
+    "K8s"
+  ],
+  "identity": "Bet.Extension.Template.Console.DI.CSharp",
+  "name": "Console Application with Dependency Injection (extended)",
+  "shortName": "Console.Di",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Console.Di",
+  "preferNameDirectory": true,
+  "guids": [
+    "57300c3f-a09b-47d2-ba4e-277bc892258b"
+  ],
+  "primaryOutputs": [
+    {
+      "path": "Console.Di.csproj"
+    }
+  ],
   "symbols": {
     "azureVaultName": {
       "type": "parameter",
@@ -40,31 +45,31 @@
       "defaultValue": "false"
     }
   },
-    "postActions": [
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
         {
-            "condition": "(!skipRestore)",
-            "description": "Restore NuGet packages required by this project.",
-            "manualInstructions": [
-                {
-                    "text": "Run 'dotnet restore'"
-                }
-            ],
-            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-            "continueOnError": true
+          "text": "Run 'dotnet restore'"
         }
-    ],
-    "sources": [
-        {
-            "exclude": [
-                ".vs/**/*",
-                ".vscode/**/*",
-                "**/[Bb]in/**",
-                "**/[Oo]bj/**",
-                ".template.config/**/*",
-                "**/*.filelist",
-                "**/*.user",
-                "**/*.lock.json"
-            ]
-        }
-    ]
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ],
+  "sources": [
+    {
+      "exclude": [
+        ".vs/**/*",
+        ".vscode/**/*",
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json"
+      ]
+    }
+  ]
 }

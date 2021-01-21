@@ -26,13 +26,15 @@ If you like or are using this project to learn or start your solution, please gi
     dotnet new --install Bet.Extension.Template.Console.DI.CSharp::1.0.0
 ```
 
-Installing from nuget package
+## Developing the package
+
+Installing from nuget package on local machine:
 
 ```bash
     # build 
-    dotnet build -c Release
-    dotnet pack -c Release -o packages
-    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.2-preview1.nupkg
+    dotnet build -c Release -p:Version=
+    dotnet pack -c Release -o packages -p:Version=
+    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.4-preview1.nupkg
     
     # uninstall    
     dotnet new -u Bet.Extension.Template.Console.DI.CSharp
@@ -45,25 +47,4 @@ Installing from nuget package
 - https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-template-pack
 - https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-project-template
 - https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#options
-
-Directory.Packages.props
-
-```xaml
-<Project>
-    <!-- https://github.com/microsoft/MSBuildSdks/blob/master/src/CentralPackageVersions/README.md-->
-    <ItemGroup>
-        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
-        <PackageVersion Include="xunit" Version="2.4.1" />
-        <PackageVersion Include="xunit.runner.visualstudio" Version="2.4.3" />
-        <PackageVersion Include="coverlet.collector" Version="1.3.0" />
-    </ItemGroup>
-</Project>
-```
-
-Directory.Build.props
-
-```xml
-   <PropertyGroup>
-     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-  </PropertyGroup>
-```
+- https://github.com/dotnet/dotnet-template-samples
