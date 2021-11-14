@@ -1,25 +1,50 @@
 <Project>
 
-  <!-- Reference for the msbuild tags: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj -->
-  <PropertyGroup>
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
+	<!-- Reference for the msbuild tags: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj -->
+	<PropertyGroup>
+		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <NetCoreVersion>3.1.10</NetCoreVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<NetCoreVersion>3.1.21</NetCoreVersion>
+		<BetCommonVersion>4.0.*</BetCommonVersion>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789.`))' == 'net'">
-    <NetCoreVersion>5.0.*</NetCoreVersion>
-    <ThreadinCommon>$(NetCoreVersion)</ThreadinCommon>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net5.0' Or '$(TargetFramework)' == 'netstandard2.1'">
+		<NetCoreVersion>5.0.*</NetCoreVersion>
+		<ThreadinCommon>$(NetCoreVersion)</ThreadinCommon>
+	</PropertyGroup>
 
-  <ItemGroup Label="SourceLink">
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<NetCoreVersion>6.0.*</NetCoreVersion>
+		<ThreadinCommon>$(NetCoreVersion)</ThreadinCommon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="../../img/icon.png" Pack="true" Visible="false" PackagePath="" />
-  </ItemGroup>
+	<ItemGroup Label="SourceLink">
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+	</ItemGroup>
+
+	<ItemGroup Label="Unit Tests">
+		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+		<PackageReference Update="xunit" Version="2.4.1" />
+		<PackageReference Update="xunit.runner.visualstudio" Version="2.4.3" />
+		<PackageReference Update="coverlet.collector" Version="3.1.0" />
+	</ItemGroup>
+
+	<ItemGroup Label="Analyzers">
+		<PackageReference Include="Bet.CodeAnalyzers" Version="1.0.12">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Bet.EditorConfig" Version="1.0.12">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="../../img/icon.png" Pack="true" Visible="false" PackagePath="" />
+	</ItemGroup>
 
 </Project>

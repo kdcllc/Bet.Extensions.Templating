@@ -6,9 +6,9 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageId>Bet.Extension.Template.Console.DI.CSharp</PackageId>
+    <PackageId>console.di</PackageId>
     <Description>Console Application with Dependency Injection (extended)</Description>
-    <PackageTags>dotnet-new;templates;console with di</PackageTags>
+    <PackageTags>$(PackageTags);dotnet-new;</PackageTags>
 
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>

@@ -5,11 +5,12 @@
     "Common",
     "Console",
     "Dependency Injection",
+    "Docker",
     "K8s"
   ],
-  "identity": "Bet.Extension.Template.Console.DI.CSharp",
-  "name": "Console Application with Dependency Injection (extended)",
-  "shortName": "Console.Di",
+  "identity": "console.di",
+  "name": "Console App with Dependency Injection (extended)",
+  "shortName": "console.di",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -19,11 +20,9 @@
   "guids": [
     "57300c3f-a09b-47d2-ba4e-277bc892258b"
   ],
-  "primaryOutputs": [
-    {
-      "path": "Console.Di.csproj"
-    }
-  ],
+  "primaryOutputs": [{
+    "path": "./Console.Di/Console.Di.csproj"
+  }],
   "symbols": {
     "azureVaultName": {
       "type": "parameter",
@@ -45,31 +44,26 @@
       "defaultValue": "false"
     }
   },
-  "postActions": [
-    {
-      "condition": "(!skipRestore)",
-      "description": "Restore NuGet packages required by this project.",
-      "manualInstructions": [
-        {
-          "text": "Run 'dotnet restore'"
-        }
-      ],
-      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-      "continueOnError": true
-    }
-  ],
-  "sources": [
-    {
-      "exclude": [
-        ".vs/**/*",
-        ".vscode/**/*",
-        "**/[Bb]in/**",
-        "**/[Oo]bj/**",
-        ".template.config/**/*",
-        "**/*.filelist",
-        "**/*.user",
-        "**/*.lock.json"
-      ]
-    }
-  ]
+  "postActions": [{
+    "condition": "(!skipRestore)",
+    "description": "Restore NuGet packages required by this project.",
+    "manualInstructions": [{
+      "text": "Run 'dotnet restore'"
+    }],
+    "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+    "continueOnError": true
+  }],
+  "sources": [{
+    "target": "./Console.Di/",
+    "exclude": [
+      ".vs/**/*",
+      ".vscode/**/*",
+      "**/[Bb]in/**",
+      "**/[Oo]bj/**",
+      ".template.config/**/*",
+      "**/*.filelist",
+      "**/*.user",
+      "**/*.lock.json"
+    ]
+  }]
 }

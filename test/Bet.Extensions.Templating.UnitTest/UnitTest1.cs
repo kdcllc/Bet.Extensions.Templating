@@ -9,7 +9,6 @@ namespace Bet.Extensions.Templating.UnitTest
         [Fact]
         public void Test1()
         {
-
         }
     }
 }
