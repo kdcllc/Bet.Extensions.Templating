@@ -1,10 +1,10 @@
 <Project>
 
   <PropertyGroup Label="Basic Settings">
-    <VersionPrefix>1.0.4-preview1</VersionPrefix>
+    <VersionPrefix>2.0.0-preview1</VersionPrefix>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>preview</LangVersion>
     <Nullable>disable</Nullable>
     <NoWarn>$(NoWarn);CS1591;NU1605;</NoWarn>
   </PropertyGroup>
@@ -23,7 +23,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicense>https://github.com/kdcllc/Bet.Extensions.Templating/master/LICENSE</PackageLicense>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageTags>common, templating</PackageTags>
+    <PackageTags>console di;dotnet templating; console di templating</PackageTags>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 

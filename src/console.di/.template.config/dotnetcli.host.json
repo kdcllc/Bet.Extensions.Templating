@@ -1,7 +1,7 @@
 {
   "symbolInfo": {
     "skipRestore": {
-      "longName": "no-restore",
+      "longName": "restore",
       "shortName": ""
     },
 
@@ -10,4 +10,4 @@
       "shortName": "vault"
     }
   }
-  }
+}

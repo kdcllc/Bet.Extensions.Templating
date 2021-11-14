@@ -11,7 +11,7 @@
 `Bet.Extensions.Templating Projects` provides with DotNetCore Dependency Injection for Console Applications and include:
 
 - One Logging provider for startup and runnable application
-- New C# 9.0 `Program.cs` syntax
+- New C# 10.0 `Program.cs` syntax
 - Dependency Injection with Configurations
 
 [![buymeacoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/vyve0og)
@@ -23,7 +23,7 @@ If you like or are using this project to learn or start your solution, please gi
 ## Install
 
 ```bash
-    dotnet new --install Bet.Extension.Template.Console.DI.CSharp::1.0.0
+    dotnet new --install console.di::2.0.0
 ```
 
 ## Developing the package
@@ -32,12 +32,12 @@ Installing from nuget package on local machine:
 
 ```bash
     # build 
-    dotnet build -c Release -p:Version=
-    dotnet pack -c Release -o packages -p:Version=
-    dotnet new -i packages\Bet.Extension.Template.Console.DI.CSharp.1.0.4-preview1.nupkg
+    dotnet build -c Release -p:Version=2.0.0-preview1
+    dotnet pack -c Release -o packages -p:Version=2.0.0-preview1
+    dotnet new -i packages\console.di.2.0.0-preview1.nupkg
     
     # uninstall    
-    dotnet new -u Bet.Extension.Template.Console.DI.CSharp
+    dotnet new -u console.di
 ```
 
 ## Resources for building DotNetCore Templating projects

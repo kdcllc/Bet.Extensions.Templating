@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "console.di": {
+    "Console.Di": {
       "commandName": "Project",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"

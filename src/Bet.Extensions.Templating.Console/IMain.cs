@@ -1,13 +1,22 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.Threading.Tasks;
 
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
-namespace Microsoft.Extensions.Hosting
+namespace Microsoft.Extensions.Hosting;
+
+/// <summary>
+/// The entry point to the console application.
+/// </summary>
+public interface IMain
 {
-    public interface IMain
-    {
-        IConfiguration Configuration { get; set; }
+    /// <summary>
+    /// The configurations for the console di application <see cref="AppHost"/>.
+    /// </summary>
+    IConfiguration Configuration { get; set; }
 
-        Task<int> RunAsync();
-    }
+    /// <summary>
+    /// The main entry point to the application.
+    /// </summary>
+    /// <returns></returns>
+    Task<int> RunAsync();
 }

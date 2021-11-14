@@ -1,20 +1,30 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+#------------------------------------------------------------------------------------------------------------------------
+#
+# USAGE:        This Dockerfile builds the sample for hosting application inside of Kubernetes Cluster.
+#
+# NOTE:         Please run commands from root of the solution.
+#
+# BUILD:        docker build --rm -f "Console.Di/Dockerfile" -t app:Console.Di .
+#
+#
+# NOTE:        See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+#------------------------------------------------------------------------------------------------------------------------
 
-FROM mcr.microsoft.com/dotnet/runtime:5.0-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/runtime:6.0-bullseye-slim AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS build
 WORKDIR /src
-COPY ["console.di/console.di.csproj", "console.di/"]
-RUN dotnet restore "console.di/console.di.csproj"
+COPY ["Console.Di/Console.Di.csproj", "Console.Di/"]
+RUN dotnet restore "Console.Di/Console.Di.csproj"
 COPY . .
-WORKDIR "/src/console.di"
-RUN dotnet build "console.di.csproj" -c Release -o /app/build
+WORKDIR "/src/Console.Di"
+RUN dotnet build "Console.Di.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "console.di.csproj" -c Release -o /app/publish
+RUN dotnet publish "Console.Di.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "console.di.dll"]
+ENTRYPOINT ["dotnet", "Console.Di.dll"]
