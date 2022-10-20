@@ -1,5 +1,6 @@
 {
   "symbolInfo": {
+
     "skipRestore": {
       "longName": "restore",
       "shortName": ""
@@ -8,6 +9,11 @@
     "azureVaultName": {
       "longName": "azurevault-name",
       "shortName": "vault"
+    },
+
+    "k8sEnabled": {
+      "longName": "kube",
+      "shortName": "k8s"
     }
   }
 }

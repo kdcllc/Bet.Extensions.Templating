@@ -29,6 +29,11 @@
       "defaultValue": "https://(vaultname).vault.azure.net/",
       "replaces": "(vaultname)"
     },
+    "k8sEnabled": {
+      "type": "parameter",
+      "defaultValue": "false",
+      "replaces":"(copyright)"
+    },
     "usid01": {
       "type": "generated",
       "generator": "guid",

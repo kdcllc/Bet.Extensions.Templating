@@ -24,6 +24,9 @@ If you like or are using this project to learn or start your solution, please gi
 
 ```bash
     dotnet new --install console.di::2.0.0
+
+    #find the latest package
+    dotnet new --search console.di
 ```
 
 ## Developing the package
