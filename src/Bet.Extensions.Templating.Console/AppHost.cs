@@ -110,11 +110,11 @@ public sealed class AppHost
 
         if (intermConfig["AzureVault:BaseUrl"] != null)
         {
-            finalConfig.AddConfiguration(
-                           intermConfigBuilder.AddAzureKeyVault(
+            var azureConfig = intermConfigBuilder.AddAzureKeyVault(
                            hostingEnviromentName: HostingEnvironment.EnvironmentName,
-                           usePrefix: true,
-                           sectionName: "AzureVault"));
+                           sectionName: "AzureVault").Build();
+
+            finalConfig.AddConfiguration(azureConfig);
         }
 
         return finalConfig

@@ -10,11 +10,6 @@
 		<BetCommonVersion>4.0.*</BetCommonVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)' == 'net5.0' Or '$(TargetFramework)' == 'netstandard2.1'">
-		<NetCoreVersion>5.0.*</NetCoreVersion>
-		<ThreadinCommon>$(NetCoreVersion)</ThreadinCommon>
-	</PropertyGroup>
-
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
 		<NetCoreVersion>6.0.*</NetCoreVersion>
 		<ThreadinCommon>$(NetCoreVersion)</ThreadinCommon>

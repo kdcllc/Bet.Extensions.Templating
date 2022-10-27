@@ -13,8 +13,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Bet.Extensions.Templating.Console" Version="1.0.*" />
+		<PackageReference Include="Bet.Extensions.Templating.Console" Version="2.0.*" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.*" />
-		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.*" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.*" />
 	</ItemGroup>
 </Project>
