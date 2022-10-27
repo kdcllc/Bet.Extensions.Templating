@@ -15,14 +15,16 @@
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "Console.Di",
+  "sourceName": "console.di",
   "preferNameDirectory": true,
   "guids": [
     "57300c3f-a09b-47d2-ba4e-277bc892258b"
   ],
-  "primaryOutputs": [{
-    "path": "./Console.Di/Console.Di.csproj"
-  }],
+  "primaryOutputs": [
+    {
+      "path": "./console.di/console.di.csproj"
+    }
+  ],
   "symbols": {
     "azureVaultName": {
       "type": "parameter",
@@ -54,7 +56,7 @@
     "continueOnError": true
   }],
   "sources": [{
-    "target": "./Console.Di/",
+    "target": "./console.di/",
     "exclude": [
       ".vs/**/*",
       ".vscode/**/*",
