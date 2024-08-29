@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<UserSecretsId>dotnet-console.di-usid</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	</PropertyGroup>
@@ -14,7 +14,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Bet.Extensions.Templating.Console" Version="2.0.*" />
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.*" />
-		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.*" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.*" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.*" />
 	</ItemGroup>
 </Project>
